@@ -24,10 +24,12 @@ def calcular():
         print("O salário mínimo atual é R$ {:.2f}".format(salario_minimo))
         print(f'O valor da sua hora trabalhada é R${salario_hora:.2f}')
         if salario < salario_minimo:
-            print('Seu salario esta abaixo do salario minimo.')
+            print('Seu salario esta abaixo do salario minimo. Você recebe R${:.2f} a menos que o salario minimo'.format(
+                salario_minimo - salario))
             break
         elif salario > salario_minimo:
-            print('Seu salario é maior que o salario minimo.')
+            print('Seu salario é maior que o salario minimo. Você recebe R${:.2f} a mais que o salario minimo'.format(
+                salario - salario_minimo))
             break
         else:
             print('Seu salario é igual ao salario minimo')
